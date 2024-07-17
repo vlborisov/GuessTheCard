@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Привет!\nЯ игра Угадайка");
         while (true) {
-            System.out.println("Напиши любой наминал карты (6,7,8,9,10,В,Д,К,Т): ");
+            System.out.println("Напиши любой номинал карты (6,7,8,9,10,В,Д,К,Т): ");
             String randomChoice = cards[(int) (Math.random() * cards.length)];
             String playerChoice = input();
             if (randomChoice.equals(playerChoice)) {
@@ -36,7 +36,7 @@ public class Main {
             if (checkMatch(inputLine)) {
                 return inputLine;
             } else {
-                System.out.println("Некорректный ввод!\nНапиши любой наминал карты (6,7,8,9,10,В,Д,К,Т): ");
+                System.out.println("Некорректный ввод!\nНапиши любой номинал карты (6,7,8,9,10,В,Д,К,Т): ");
             }
         }
     }
