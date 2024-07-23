@@ -1,11 +1,12 @@
 package org.example;
 
+
 import java.util.Scanner;
 
 public class Main {
 
     public static Scanner in = new Scanner(System.in);
-    public static String[] cards = {"6", "7", "8", "9", "10", "в", "д", "к", "т"};
+    public static String[] cards = {"6", "7", "8", "9", "10", "в", "д", "к", "т"};l
 
     public static void main(String[] args) {
         System.out.println("Привет!\nЯ игра Угадайка");
@@ -31,7 +32,7 @@ public class Main {
 
     public static String input() {
         while (true) {
-            String inputLine = in.nextLine().toLowerCase();
+            String inputLine = in.nextLine();
             if (checkMatch(inputLine)) {
                 return inputLine;
             } else {
@@ -42,7 +43,7 @@ public class Main {
 
     public static boolean checkMatch(String input) {
         for (int i = 0; i < cards.length; i++) {
-            if (input.equals(cards[i])) {
+            if (input.equalsIgnoreCase(cards[i])) {
                 return true;
             }
         }
@@ -51,9 +52,9 @@ public class Main {
 
     public static boolean repeatCheck() {
         while (true) {
-            String inputLine = in.nextLine().toLowerCase();
-            if (inputLine.equals("да") || inputLine.equals("нет")) {
-                if (inputLine.equals("да")) {
+            String inputLine = in.nextLine();
+            if (inputLine.equalsIgnoreCase("да") || inputLine.equalsIgnoreCase("нет")) {
+                if (inputLine.equalsIgnoreCase("да")) {
                     return true;
                 } else {
                     return false;
